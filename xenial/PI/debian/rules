@@ -6,10 +6,6 @@ export LC_ALL=C
 	dh $@
 
 override_dh_auto_configure:
-	./autogen.sh
-	./configure --with-proto --without-internal-rpc --without-cli --without-bmv2 --without-sysrepo --prefix=/usr
-
-override_dh_auto_build:
 	cp -r $(CURDIR)/third_party/googletest/tmp/ $(CURDIR)/third_party/googletest/
 	rm -rf $(CURDIR)/third_party/googletest/tmp/
 	cp -r $(CURDIR)/proto/openconfig/gnmi/tmp/ proto/openconfig/gnmi
@@ -18,6 +14,10 @@ override_dh_auto_build:
 	rm -rf $(CURDIR)/proto/openconfig/public/tmp/
 	cp -r $(CURDIR)/proto/p4runtime/tmp/ proto/p4runtime
 	rm -rf $(CURDIR)/proto/p4runtime/tmp/
+	./autogen.sh
+	./configure --with-proto --without-internal-rpc --without-cli --without-bmv2 --without-sysrepo --prefix=/usr
+
+override_dh_auto_build:
 	make all
 
 override_dh_auto_install:
