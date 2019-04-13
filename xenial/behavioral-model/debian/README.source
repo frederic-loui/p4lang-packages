@@ -1,0 +1,9 @@
+p4lang-bmv2 for Debian
+---------------------
+
+2019/03/07 - It is a choice to build only one package from p4lang bmv2 1.13.0
+             The objective is to follow P4 successful build examples.
+             Successful CI build chain against official builds would be nice.
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 05 Mar 2019 14:30:30 +0000
+
