@@ -6,14 +6,10 @@ export LC_ALL=C
 	dh $@
 
 override_dh_auto_configure:
-	cp -r $(CURDIR)/third_party/googletest/tmp/ $(CURDIR)/third_party/googletest/
-	rm -rf $(CURDIR)/third_party/googletest/tmp/
-	cp -r $(CURDIR)/proto/openconfig/gnmi/tmp/ proto/openconfig/gnmi
-	rm -rf $(CURDIR)/proto/openconfig/gnmi/tmp/
-	cp -r $(CURDIR)/proto/openconfig/public/tmp/ proto/openconfig/public
-	rm -rf $(CURDIR)/proto/openconfig/public/tmp/
-	cp -r $(CURDIR)/proto/p4runtime/tmp/ proto/p4runtime
-	rm -rf $(CURDIR)/proto/p4runtime/tmp/
+	cd $(CURDIR)/third_party/googletest/tmp && mv ./* ../ && cd ../ && rmdir $(CURDIR)/third_party/googletest/tmp ;
+	cd $(CURDIR)/proto/openconfig/gnmi/tmp && mv ./* ../ && cd ../ && rmdir $(CURDIR)/proto/openconfig/gnmi/tmp ;
+	cd $(CURDIR)/proto/openconfig/public/tmp && mv ./* ../ && cd ../ && rmdir $(CURDIR)/proto/openconfig/public/tmp ;
+	cd $(CURDIR)/proto/p4runtime/tmp/ && mv ./* ../ && cd ../ && rmdir $(CURDIR)/proto/p4runtime
 	./autogen.sh
 	./configure --with-proto --without-internal-rpc --without-cli --without-bmv2 --without-sysrepo --prefix=/usr
 
