@@ -1,0 +1,34 @@
+Source: p4lang-pi
+Section: devel
+Priority: optional
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Build-Depends: 
+ debhelper (>= 9),
+ autoconf,
+ automake,
+ libtool,
+ pkg-config,
+ libboost-dev, libboost-system-dev, libboost-thread-dev,
+ libjudy-dev, libprotobuf-dev, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++-dev, libgrpc++1, libgrpc-dev, libgrpc3, python-grpcio, protobuf-compiler-grpc,
+Standards-Version: 3.9.2
+Homepage: https://github.com/p4lang/PI 
+
+Package: p4lang-pi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc3, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.58.0, libboost-thread1.58.0,
+ libjudydebian1,
+ python,
+Description: An implementation framework for a P4Runtime server 
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program. 
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries. They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed 
+ as a parameter to the API.
+ .

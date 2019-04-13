@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	./autogen.sh
+	./configure --with-proto --without-internal-rpc --without-cli --without-bmv2 --without-sysrepo --prefix=/usr
+
+override_dh_auto_build:
+	cp -r $(CURDIR)/third_party/googletest/tmp/ $(CURDIR)/third_party/googletest/
+	rm -rf $(CURDIR)/third_party/googletest/tmp/
+	cp -r $(CURDIR)/proto/openconfig/gnmi/tmp/ proto/openconfig/gnmi
+	rm -rf $(CURDIR)/proto/openconfig/gnmi/tmp/
+	cp -r $(CURDIR)/proto/openconfig/public/tmp/ proto/openconfig/public
+	rm -rf $(CURDIR)/proto/openconfig/public/tmp/
+	cp -r $(CURDIR)/proto/p4runtime/tmp/ proto/p4runtime
+	rm -rf $(CURDIR)/proto/p4runtime/tmp/
+	make all
+
+override_dh_auto_install:
+	dh_auto_install -- DESTDIR=$$(pwd)/build-out install
+	find $(CURDIR)/build-out/usr/lib/python2.7/dist-packages/ -name "*.pyc" -delete 
+	find $(CURDIR)/build-out/usr/lib/python2.7/dist-packages/ -name "*.pyo" -delete 
+
