@@ -1,7 +1,6 @@
 #!/usr/bin/make -f
 
 DH_VERBOSE = 1
-#export DEB_LDFLAGS_MAINT_STRIP = -Wl,-Bsymbolic-functions
 
 %:
 	dh $@
@@ -12,8 +11,6 @@ override_dh_auto_configure:
 	./autogen.sh
 	./configure --with-pdfixed --with-pi --prefix=/usr \
 	--enable-debugger --with-thrift --with-nanomsg "CXXFLAGS=-O0 -g";
-#		--without-nanomsg --disable-elogger --disable-logging-macros \
-#		'CFLAGS=-g -O2' 'CXXFLAGS=-g -O2';
 	cd $(P4LANG_BUILD_DIR)/targets/simple_switch_grpc && ./autogen.sh && \
 		./configure --without-sysrepo --with-thrift --prefix=/usr "CXXFLAGS=-O0 -g";
 
