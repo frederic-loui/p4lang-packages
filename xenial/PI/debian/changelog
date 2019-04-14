@@ -1,4 +1,4 @@
-pi (0.8-1) xenial; urgency=medium
+p4lang-pi (0.8-1) xenial; urgency=medium
 
   * Initial release (based on P4lang validated CI packages) 
 

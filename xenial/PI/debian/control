@@ -14,7 +14,7 @@ Build-Depends:
 Standards-Version: 3.9.2
 Homepage: https://github.com/p4lang/PI 
 
-Package: pi
+Package: p4lang-pi
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
