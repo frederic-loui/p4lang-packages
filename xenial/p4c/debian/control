@@ -1,0 +1,54 @@
+Source: p4lang-p4c
+Section: devel
+Priority: optional
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Build-Depends: 
+ debhelper (>= 9),
+ git,
+ automake,
+ libtool,
+ bison,
+ cmake,
+ flex,
+ g++,
+ lcov,
+ libjudy-dev,
+ libpcap-dev,
+ libboost-dev, libboost-graph-dev, libboost-iostreams1.58-dev,
+ libfl-dev,
+ libgc-dev,
+ libgmp-dev,
+ pkg-config,
+ python-ipaddr, python-pip, python-setuptools,
+ python, python-scapy, python-ply,
+ tcpdump,
+ libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc3, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ p4lang-bmv2,
+Standards-Version: 3.9.7
+Homepage: https://github.com/p4lang/p4c 
+
+Package: p4lang-p4c
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libboost-program-options1.58.0, libboost-system1.58.0, libboost-filesystem1.58.0, libboost-thread1.58.0,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc3, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ p4lang-bmv2,
+# libboost-filesystem1.58.0, libboost-iostreams1.58-dev, 
+Description: p4c p4lang project compiler 
+ p4c is a new, alpha-quality reference compiler for the P4 programming language.
+ It supports both P4-14 and P4-16; you can find more information about P4 here 
+ and the specifications for both versions of the language in http://p4.org.
+ .
+ p4c is modular; it provides a standard frontend and midend which can be 
+ combined with a target-specific backend to create a complete P4 compiler.
+ The goal is to make adding new backends easy.
+ .
