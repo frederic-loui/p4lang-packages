@@ -1,4 +1,4 @@
-Source: p4lang-bmv2
+Source: bmv2
 Section: devel
 Priority: optional
 Maintainer: Frederic LOUI <frederic.loui@renater.fr>
@@ -24,7 +24,7 @@ Build-Depends:
  thrift-compiler,
  libnanomsg5, libnanomsg-dev, nanomsg-utils,
  python-nnpy,
- p4lang-pi,
+ pi,
 # libc6-i386, lib32gcc1, lib32stdc++6,
 # clang-6.0, clang-6.0-doc, clang-6.0-examples, lib32gcc1, lib32stdc++6, libc6-i386, libclang-6.0-dev, libclang-common-6.0-dev,
 Standards-Version: 3.9.2
@@ -41,7 +41,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  thrift-compiler,
  libnanomsg5, libnanomsg-dev, nanomsg-utils,
  python-nnpy,
- p4lang-pi,
+ pi,
 Description: p4lang behavioral-model
  This is the second version of the P4 software switch (aka behavioral model),
  nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,

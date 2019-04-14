@@ -1,7 +1,7 @@
-p4lang-pi for Debian
+pi for Xenial 
 -------------------
 
-2019/03/07 - It is a choice to build only one package from p4lang PI 0.7
+2019/03/07 - It is a choice to build only one package from p4lang PI 0.8
              The objective is to follow P4 successful build examples.
              Successful CI build chain against official builds would be nice.
 

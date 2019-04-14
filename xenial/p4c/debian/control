@@ -1,4 +1,4 @@
-Source: p4lang-p4c
+Source: p4c
 Section: devel
 Priority: optional
 Maintainer: Frederic LOUI <frederic.loui@renater.fr>
@@ -27,11 +27,11 @@ Build-Depends:
  libthrift0, libthrift-dev, python-thrift, thrift-compiler,
  libnanomsg5, libnanomsg-dev, nanomsg-utils,
  python-nnpy,
- p4lang-bmv2,
+ bmv2,
 Standards-Version: 3.9.7
 Homepage: https://github.com/p4lang/p4c 
 
-Package: p4lang-p4c
+Package: p4c
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libboost-program-options1.58.0, libboost-system1.58.0, libboost-filesystem1.58.0, libboost-thread1.58.0,
@@ -41,7 +41,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  libthrift0, libthrift-dev, python-thrift, thrift-compiler,
  libnanomsg5, libnanomsg-dev, nanomsg-utils,
  python-nnpy,
- p4lang-bmv2,
+ bmv2,
 # libboost-filesystem1.58.0, libboost-iostreams1.58-dev, 
 Description: p4c p4lang project compiler 
  p4c is a new, alpha-quality reference compiler for the P4 programming language.

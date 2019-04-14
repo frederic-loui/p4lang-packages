@@ -1,4 +1,4 @@
-p4lang-p4c (1.1.0-rc1-1) xenial; urgency=medium
+p4c (1.1.0-rc1-1) xenial; urgency=medium
 
   * Initial release (based on P4lang validated CI packages) 
 

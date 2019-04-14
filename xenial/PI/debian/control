@@ -1,4 +1,4 @@
-Source: p4lang-pi
+Source: pi
 Section: devel
 Priority: optional
 Maintainer: Frederic LOUI <frederic.loui@renater.fr>
@@ -14,7 +14,7 @@ Build-Depends:
 Standards-Version: 3.9.2
 Homepage: https://github.com/p4lang/PI 
 
-Package: p4lang-pi
+Package: pi
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,

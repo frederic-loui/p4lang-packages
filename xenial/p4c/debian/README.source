@@ -1,4 +1,4 @@
-p4lang-p4c for Debian
+p4c for Xenial 
 --------------------
 
 2019/03/07 - It is a choice to build only one package from p4lang-p4c 1.1.0-rc1 

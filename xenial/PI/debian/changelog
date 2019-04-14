@@ -1,16 +1,4 @@
-p4lang-pi (0.7-3) xenial; urgency=medium
-
-  * refactored debian/control 
-
- -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 26 Mar 2019 15:08:02 +0100
-
-p4lang-pi (0.7-2) xenial; urgency=medium
-
-  * Corrected libboost version from 1.62.1 -> 1.58.0 
-
- -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 26 Mar 2019 09:43:12 +0100
-
-p4lang-pi (0.7-1) xenial; urgency=medium
+pi (0.8-1) xenial; urgency=medium
 
   * Initial release (based on P4lang validated CI packages) 
 

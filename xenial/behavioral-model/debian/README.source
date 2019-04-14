@@ -1,4 +1,4 @@
-p4lang-bmv2 for Debian
+bmv2 for Xenial
 ---------------------
 
 2019/03/07 - It is a choice to build only one package from p4lang bmv2 1.13.0
