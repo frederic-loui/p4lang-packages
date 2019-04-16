@@ -1,9 +1,0 @@
-./usr/lib/python2.7/dist-packages/gnmi/__init__.py
-./usr/lib/python2.7/dist-packages/gnmi/gnmi_pb2.py
-./usr/lib/python2.7/dist-packages/gnmi/gnmi_pb2_grpc.py
-./usr/lib/python2.7/dist-packages/google/__init__.py
-./usr/lib/python2.7/dist-packages/google/rpc
-./usr/lib/python2.7/dist-packages/p4/__init__.py
-./usr/lib/python2.7/dist-packages/p4/config
-./usr/lib/python2.7/dist-packages/p4/tmp
-./usr/lib/python2.7/dist-packages/p4/v1
