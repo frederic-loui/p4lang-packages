@@ -1,0 +1,13 @@
+Package: libpi-core-dbgsym
+Package-Type: ddeb
+Source: pi
+Version: 0.8~bionic-7
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Installed-Size: 372
+Depends: libpi-core (= 0.8~bionic-7)
+Section: debug
+Priority: optional
+Description: debug symbols for libpi-core
+Build-Ids: 0fd6325ccbd3d35a48230a06328c408898a64f28 2280aae5cf5e61dd141a836b208d34d3c7759b35 2ab43aeafa76e34bdc5115aa701e1b2691b16774 963fd749cc2e55e939a2c40a89fbabacbb191f3a f00f2831baa9b29e4ccbab18e61c38d66975b705

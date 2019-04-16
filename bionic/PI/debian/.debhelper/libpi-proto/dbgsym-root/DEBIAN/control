@@ -1,0 +1,13 @@
+Package: libpi-proto-dbgsym
+Package-Type: ddeb
+Source: pi
+Version: 0.8~bionic-7
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Installed-Size: 8874
+Depends: libpi-proto (= 0.8~bionic-7)
+Section: debug
+Priority: optional
+Description: debug symbols for libpi-proto
+Build-Ids: 2b3cc4938106145ebac3007998bfee3c96b22da7 41f994ce62276a09bc3213701216e08625235dc9 866d5a662f544f99305ee71d6f381695909d91cc 8801b9a9eed7c8a2956413ba39fb673736ea5f44 ba0ed79df8b44bbb529ba02643f7f9f5e13ad1e4 f2fa8223954dfe9f20c80acdfab5603bb360ef31

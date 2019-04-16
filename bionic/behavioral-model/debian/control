@@ -1,0 +1,367 @@
+Source: bmv2
+Section: devel
+Priority: optional
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Build-Depends: 
+ debhelper (>= 9),
+ libssl-dev,
+ automake,
+ cmake,
+ curl,
+ git,
+ libjudy-dev,
+ libgmp-dev,
+ libpcap-dev,
+ libboost-dev, libboost-program-options-dev, libboost-system-dev, libboost-filesystem-dev, libboost-thread-dev,
+ libtool,
+ pkg-config,
+ libprotobuf17, libprotobuf-dev, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+Standards-Version: 4.1.4 
+Homepage: https://github.com/p4lang/behavioral-model 
+
+Package: bmv2-core
+Architecture: any  
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,  
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-core,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time 
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 core package with thrift enabled
+
+Package: libbmv2-core
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 core library package with thrift enabled
+
+Package: libbmv2-core-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-core,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 core library development package with thrift enabled
+
+Package: libbmv2-pdfixed
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-core,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 pdfixed library package with thrift enabled
+
+Package: libbmv2-pdfixed-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-pdfixed,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 pdfixed library package with thrift enabled
+
+Package: bmv2-pi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-pi,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 pi with simple_switch_grpc package with thrift enabled
+
+Package: libbmv2-pi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-core,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 pi library package with thrift enabled
+
+Package: libbmv2-pi-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-pi,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 pi development library package with thrift enabled.
+
+Package: python-bmv2-core
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-core-dev,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 python core binding package.
+
+Package: python-bmv2-pdfixed
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-pdfixed-dev,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 python pdfixed binding package.
+
+Package: python-bmv2-pi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl1.1,
+ libboost-program-options1.65.1, libboost-system1.65.1, libboost-filesystem1.65.1, libboost-thread1.65.1,
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ pi-core, libpi-core, libpi-core-dev,
+ pi-proto, libpi-proto, libpi-proto-dev,
+ libbmv2-pi-dev,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is the BMV2 python pi binding package.
+

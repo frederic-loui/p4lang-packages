@@ -1,0 +1,6 @@
+usr/include/bm/pdfixed/*
+usr/lib/libbmpdfixed*a
+usr/lib/libbmpdfixedthrift*a
+usr/lib/libbmpdfixed.so
+usr/lib/libbmpdfixedthrift.so
+

@@ -1,0 +1,30 @@
+bmv2 (1.13.0~bionic-5) bionic; urgency=medium
+
+  * Corrected libssl -> libssl1.1
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 02 Apr 2019 18:09:17 +0000
+
+bmv2 (1.13.0~bionic-4) bionic; urgency=medium
+
+  * Removed effectively the testas i386 tests are failinh 
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 02 Apr 2019 12:48:44 +0000
+
+bmv2 (1.13.0~bionic-3) bionic; urgency=medium
+
+  * Removed make test as i386 tests are not working and prevent the package
+    building 
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 02 Apr 2019 11:50:10 +0000
+
+bmv2 (1.13.0~bionic-2) bionic; urgency=medium
+
+  * Added libssl-dev and libssl dependencies
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 02 Apr 2019 10:38:30 +0000
+
+bmv2 (1.13.0~bionic-1) bionic; urgency=medium
+
+  * Initial release (based on P4lang validated CI packages)
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 05 Mar 2019 14:30:30 +0000

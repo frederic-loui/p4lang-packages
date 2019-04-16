@@ -1,0 +1,5 @@
+usr/lib/libbm_grpc_dataplane.so.0.*
+usr/lib/libbmpi.so.0.*
+usr/lib/libbm_grpc_dataplane.so.0
+usr/lib/libbmpi.so.0
+

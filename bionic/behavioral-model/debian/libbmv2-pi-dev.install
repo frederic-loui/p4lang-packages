@@ -1,0 +1,6 @@
+usr/include/bm/PI/* 
+usr/include/p4/bm/*
+usr/lib/libbm_grpc_dataplane*a  
+usr/lib/libbmpi*a  
+usr/lib/libbm_grpc_dataplane.so
+usr/lib/libbmpi.so 

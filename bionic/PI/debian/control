@@ -1,0 +1,183 @@
+Source: pi
+Section: devel
+Priority: optional
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Build-Depends: 
+ debhelper (>= 9),
+ autoconf,
+ automake,
+ libtool,
+ pkg-config,
+ libboost-dev, libboost-system-dev, libboost-thread-dev,
+ libjudy-dev, libprotobuf-dev, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++-dev, libgrpc++1, libgrpc-dev, libgrpc7, python-grpcio, protobuf-compiler-grpc,
+Standards-Version: 4.1.4 
+Homepage: https://github.com/p4lang/PI 
+
+Package: pi-core
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+Description: Implementation framework of a P4Runtime server 
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program. 
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries. They are 
+ independent from the actual
+ instance of the controlled object (and thus the name) which is passed 
+ as a parameter to the API.
+ .
+ This is the pi core software
+
+Package: libpi-core
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries.
+ They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed
+ as a parameter to the API.
+ .
+ This is the pi core library package 
+
+Package: libpi-core-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+ libpi-core,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries.
+ They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed
+ as a parameter to the API.
+ .
+ This is the pi core library development package 
+
+Package: pi-proto
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries.
+ They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed
+ as a parameter to the API.
+ .
+ This is the pi proto file package 
+
+Package: libpi-proto
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ as a parameter to the API.
+ .
+ This is the pi proto library package
+
+Package: libpi-proto-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+ libpi-core,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries.
+ They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed
+ as a parameter to the API.
+ .
+ This is the pi proto library development package
+
+Package: python-pi-proto
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+ libpi-core,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries.
+ They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed
+ as a parameter to the API.
+ .
+ This is the pi proto python library development package
+
+Package: python-pi-core
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libprotobuf17, libprotobuf-dev, libprotobuf-java, libprotoc17, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc7, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libboost-system1.65.1, libboost-thread1.65.1,
+ libjudydebian1,
+ python,
+ libpi-core,
+Description: Implementation framework of a P4Runtime server
+ Protocol Independent API (PI or P4 Runtime) defines a set of APIs that allow
+ interacting with entities defined in a P4 program.
+ These include: tables, counters, meters ...
+ .
+ PI APIs are defined at the level of properties that can be effected.
+ Examples include adding and deleting table entries.
+ They are independent from the actual
+ instance of the controlled object (and thus the name) which is passed
+ as a parameter to the API.
+ .
+ This is the pi core python library development package
+

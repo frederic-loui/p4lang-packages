@@ -1,0 +1,5 @@
+pi (0.8~bionic-1) bionic; urgency=medium
+
+  * Initial release (based on P4lang validated CI packages) 
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Thu, 28 Feb 2019 19:47:52 +0000

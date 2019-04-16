@@ -1,0 +1,6 @@
+usr/lib/python2.7/dist-packages/bm_runtime/*  
+usr/lib/python2.7/dist-packages/*.py  
+usr/lib/python2.7/dist-packages/nanomsg_client.py  
+usr/lib/python2.7/dist-packages/pswitch_runtime/*  
+usr/lib/python2.7/dist-packages/sswitch_runtime/*  
+

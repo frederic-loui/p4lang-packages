@@ -1,0 +1,5 @@
+p4c (1.1.0-rc1~bionic-1) bionic; urgency=medium
+
+  * Initial release (based on P4lang validated CI packages) 
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 05 Mar 2019 16:36:40 +0000
