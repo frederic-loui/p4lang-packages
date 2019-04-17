@@ -1,0 +1,60 @@
+Source: bmv2
+Section: devel
+Priority: optional
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Build-Depends: 
+ debhelper (>= 9),
+ libssl-dev,
+ automake,
+ cmake,
+ curl,
+ git,
+ libjudy-dev,
+ libgmp-dev,
+ libpcap-dev,
+ libboost-dev, libboost-program-options-dev, libboost-system-dev, libboost-filesystem-dev, libboost-thread-dev,
+ libtool,
+ pkg-config,
+ libprotobuf-dev, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ p4lang-pi,
+Standards-Version: 4.1.4 
+Homepage: https://github.com/p4lang/behavioral-model 
+
+Package: bmv2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libssl-dev,
+ libjudy-dev,
+ libgmp-dev,
+ libpcap-dev,
+ libboost-dev, libboost-program-options-dev, libboost-system-dev, libboost-filesystem-dev, libboost-thread-dev,
+ libtool,
+ pkg-config,
+ libprotobuf-dev, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift, thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ p4lang-pi,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .
+ This is p4lang bmv2 target simple_switch & simple_switch_grpc
+ with thrift enabled
+
