@@ -1,9 +1,0 @@
-p4c for Bionic
---------------------
-
-2019/03/07 - It is a choice to build only one package from p4lang-p4c 1.1.0-rc1 
-             The objective is to follow P4 successful build examples.
-             Successful CI build chain against official builds would be nice.
-
- -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 05 Mar 2019 16:36:40 +0000
-
