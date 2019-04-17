@@ -1,4 +1,4 @@
-ptf (0.9.1~bionic-1) bionic; urgency=low
+ptf (0.9.1-1) bionic; urgency=low
 
   * source package automatically created by stdeb 0.8.5
 
