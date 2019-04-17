@@ -24,7 +24,7 @@ Build-Depends:
  libprotobuf-dev, libprotobuf-java, libprotoc-dev, protobuf-compiler, python-protobuf,
  libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
  libthrift0, libthrift-dev, python-thrift, thrift-compiler,
- p4lang-bmv2,
+ bmv2,
 Standards-Version: 4.1.4
 Homepage: https://github.com/p4lang/p4c 
 
@@ -48,7 +48,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  libprotobuf-dev, libprotobuf-java, libprotoc-dev, protobuf-compiler, python-protobuf,
  libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
  libthrift0, libthrift-dev, python-thrift, thrift-compiler,
- p4lang-bmv2,
+ bmv2,
 Description: p4c p4lang project compiler 
  p4c is a new, alpha-quality reference compiler for the P4 programming language.
  It supports both P4-14 and P4-16; you can find more information about P4 here 
