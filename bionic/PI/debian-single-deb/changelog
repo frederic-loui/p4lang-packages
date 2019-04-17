@@ -1,4 +1,4 @@
-pi (0.8~bionic-1) bionic; urgency=medium
+pi (0.8-1) bionic; urgency=medium
 
   * Initial release (based on P4lang validated CI packages) 
 
