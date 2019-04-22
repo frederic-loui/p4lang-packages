@@ -9,7 +9,7 @@ Standards-Version: 3.9.6
 Homepage: https://github.com/p4lang/ptf
 
 Package: python-ptf
-Architecture: all
+Architecture: amd64 
 Depends: ${misc:Depends}, ${python:Depends}
 Description: PTF is a Python based dataplane test framework.
  PTF Packet Testing Framework

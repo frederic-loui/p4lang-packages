@@ -29,7 +29,7 @@ Standards-Version: 4.1.4
 Homepage: https://github.com/p4lang/p4c 
 
 Package: p4c
-Architecture: any
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends},
  cpp, 
  libboost-dev, libboost-graph-dev, libboost-iostreams1.65-dev,

@@ -16,7 +16,7 @@ Standards-Version: 4.1.4
 Homepage: https://github.com/p4lang/PI 
 
 Package: p4lang-pi
-Architecture: any
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libboost-dev, libboost-system-dev, libboost-thread-dev,
  libjudy-dev,

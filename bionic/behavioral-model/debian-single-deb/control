@@ -25,7 +25,7 @@ Standards-Version: 4.1.4
 Homepage: https://github.com/p4lang/behavioral-model 
 
 Package: bmv2
-Architecture: any
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libssl-dev,
  libjudy-dev,
