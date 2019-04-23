@@ -15,7 +15,7 @@ Standards-Version: 3.9.2
 Homepage: https://github.com/p4lang/PI 
 
 Package: p4lang-pi
-Architecture: any
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
  libgrpc++1, libgrpc3, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
