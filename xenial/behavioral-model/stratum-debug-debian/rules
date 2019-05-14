@@ -10,7 +10,7 @@ P4LANG_BUILD_DIR=$(CURDIR)
 override_dh_auto_configure:
 	./autogen.sh
 	./configure --with-pi --disable-elogger --without-nanomsg  \
-	--without-targets --without-thrift "CPPFLAGS=-DWITH_SIMPLE_SWITCH";
+	--without-targets --without-thrift "CPPFLAGS=-I$(P4LANG_BUILD_DIR)/targets/simple_switch -DWITH_SIMPLE_SWITCH -isystem/usr/include";
 	#cd $(P4LANG_BUILD_DIR)/targets/simple_switch && ./autogen.sh && \
 	#	./configure --without-sysrepo --with-thrift --prefix=/usr "CXXFLAGS=-O0 -g";
 
