@@ -1,0 +1,59 @@
+Source: bmv2
+Section: devel
+Priority: optional
+Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Build-Depends: 
+ debhelper (>= 9),
+ automake,
+ cmake,
+ clang-3.8,
+ curl,
+ clang-6.0, clang-6.0-doc, clang-6.0-examples, libclang-6.0-dev, libclang-common-6.0-dev, python-clang-6.0,
+ libclang1-6.0, libomp-dev, libomp5, 
+ git,
+ lcov,
+ libjudy-dev,
+ libgmp-dev,
+ libpcap-dev,
+ libboost-dev, libboost-program-options-dev, libboost-system-dev, libboost-filesystem-dev, libboost-thread-dev,
+ libtool,
+ pkg-config,
+ libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc3, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift,
+ thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ p4lang-pi,
+# libc6-i386, lib32gcc1, lib32stdc++6,
+# clang-6.0, clang-6.0-doc, clang-6.0-examples, lib32gcc1, lib32stdc++6, libc6-i386, libclang-6.0-dev, libclang-common-6.0-dev,
+Standards-Version: 3.9.2
+Homepage: https://github.com/p4lang/behavioral-model 
+
+Package: bmv2
+Architecture: amd64  
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libboost-program-options1.58.0, libboost-system1.58.0, libboost-filesystem1.58.0, libboost-thread1.58.0,  
+ libjudydebian1, libgmp10, libpcap0.8, python,
+ libprotobuf10, libprotobuf-dev, libprotobuf-java, libprotoc10, libprotoc-dev, protobuf-compiler, python-protobuf,
+ libgrpc++1, libgrpc3, libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
+ libthrift0, libthrift-dev, python-thrift,
+ thrift-compiler,
+ libnanomsg5, libnanomsg-dev, nanomsg-utils,
+ python-nnpy,
+ p4lang-pi,
+Description: p4lang behavioral-model
+ This is the second version of the P4 software switch (aka behavioral model),
+ nicknamed bmv2. It is meant to replace the original version, p4c-behavioral,
+ in the long run, although we do not have feature equivalence yet.
+ Unlike p4c-behavioral, this new version is static
+ (i.e. we do not need to auto-generate new code and recompile every time 
+ a modification is done to the P4 program) and written in C++11.
+ For information on why we decided to write a new version of the behavioral
+ model, please look at the FAQ below.
+ .
+ his repository contains code for several variations of the behavioral model,
+ e.g. simple_switch, simple_switch_grpc, psa_switch, etc.
+ See here for more details on the differences between these.
+ p4lang behavioral-model provide simple_switch, simple_switch_grpc.
+ .

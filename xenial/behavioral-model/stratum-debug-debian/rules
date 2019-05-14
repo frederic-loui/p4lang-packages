@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+DH_VERBOSE = 1
+
+%:
+	dh $@
+
+P4LANG_BUILD_DIR=$(CURDIR)
+
+override_dh_auto_configure:
+	./autogen.sh
+	./configure --with-pi --disable-elogger --without-nanomsg  \
+	--without-targets --without-thrift "CPPFLAGS=-DWITH_SIMPLE_SWITCH";
+	#cd $(P4LANG_BUILD_DIR)/targets/simple_switch && ./autogen.sh && \
+	#	./configure --without-sysrepo --with-thrift --prefix=/usr "CXXFLAGS=-O0 -g";
+
+override_dh_auto_build:
+	make 
+	cd $(P4LANG_BUILD_DIR)/targets/simple_switch && make ;
+
+override_dh_auto_install:
+	make DESTDIR=$(P4LANG_BUILD_DIR)/build-out install
+	cd $(P4LANG_BUILD_DIR)/targets/simple_switch && \
+		make DESTDIR=$(P4LANG_BUILD_DIR)/build-out install
+	find $(CURDIR)/build-out/usr/lib/python2.7/dist-packages/ -name "*.pyc" -delete 
+	find $(CURDIR)/build-out/usr/lib/python2.7/dist-packages/ -name "*.pyo" -delete 
+
+#override_dh_auto_test:
+

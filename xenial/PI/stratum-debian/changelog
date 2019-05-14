@@ -1,0 +1,5 @@
+p4lang-pi (0.8-1) xenial; urgency=medium
+
+  * Stratum nitial release (based on P4lang validated CI packages) 
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 14 May 2019 09:40:52 +0000

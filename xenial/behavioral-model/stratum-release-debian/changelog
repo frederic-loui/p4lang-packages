@@ -1,0 +1,5 @@
+bmv2 (1.13.0-1) xenial; urgency=medium
+
+  * Stratum initial release (based on P4lang validated CI packages)
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 14 May 2019 09:51:30 +0000
