@@ -20,6 +20,7 @@ Build-Depends:
  clang,
  iproute2,
  net-tools,
+ python3, python3-dev,
  python-tenjin, python-pyroute2, python3-ply, python3-scapy,
  libprotobuf-dev, libprotobuf-java, libprotoc-dev, protobuf-compiler, python-protobuf,
  libgrpc-dev, libgrpc++-dev, protobuf-compiler-grpc, python-grpcio,
