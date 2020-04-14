@@ -1,0 +1,10 @@
+p4lang-pi for focal
+-------------------
+
+2020/04/14 - It is a choice to build only one package from p4lang PI nightly 
+             The objective is to follow P4 successful build examples.
+             Successful CI build chain against official builds would be nice.
+
+
+ -- Frederic LOUI <fl@rmp.ls>  Tue, 14 Apr 2020 19:47:52 +0000
+
