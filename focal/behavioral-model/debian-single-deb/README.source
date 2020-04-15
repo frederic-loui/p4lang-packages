@@ -1,0 +1,9 @@
+bmv2 for focal
+---------------------
+
+2020/04/15 - It is a choice to build only one package from p4lang bmv2 nightly 
+             The objective is to follow P4 successful build examples.
+             Successful CI build chain against official builds would be nice.
+
+ -- Frederic LOUI <fl@mp.ls>  Wed, 15 Apr 2020 14:30:30 +0000
+

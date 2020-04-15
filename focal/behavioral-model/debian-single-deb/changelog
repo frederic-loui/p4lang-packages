@@ -1,0 +1,5 @@
+bmv2 (0~nightly) focal; urgency=medium
+
+  * Initial release (based on P4lang validated CI packages)
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 05 Mar 2019 14:30:30 +0000
