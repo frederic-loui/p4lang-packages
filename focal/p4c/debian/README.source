@@ -1,0 +1,8 @@
+p4c for focal
+--------------------
+
+2020/04/16 - It is a choice to build only one package from p4lang-p4c nightly 
+             The objective is to follow P4 successful build examples.
+             Successful CI build chain against official builds would be nice.
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Thu, 16 Apr 2020 16:36:40 +0000

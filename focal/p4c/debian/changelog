@@ -1,0 +1,11 @@
+p4c (0~nightly) focal; urgency=medium
+
+  * Initial focal backport
+
+ -- Frederic LOUI <fl@mp.ls>  Thu, 16 Apr 2020 06:25:09 +0000
+
+p4c (1.1.0-rc1-1) bionic; urgency=medium
+
+  * Initial release (based on P4lang validated CI packages) 
+
+ -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 05 Mar 2019 16:36:40 +0000
