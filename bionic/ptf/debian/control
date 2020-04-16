@@ -1,35 +1,30 @@
 Source: ptf
-Maintainer: Frederic LOUI <frederic.loui@renater.fr>
+Maintainer: Frederic LOUI <fl@mp.ls>
 Section: python
 Priority: optional
-Build-Depends: dh-python, python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 9),
- python-scapy, python-pypcap, tcpdump,
- python-nnpy, libnanomsg-dev, libnanomsg5, nanomsg-utils, 
-Standards-Version: 3.9.6
-Homepage: https://github.com/p4lang/ptf
+Build-Depends: dh-python, python-all-dev (>= 2.6.6-3), debhelper (>= 9), python-setuptools (>= 0.6b3),  python3-setuptools , python3-all-dev,
+Standards-Version: 3.9.1
 
 Package: python-ptf
-Architecture: amd64 
-Depends: ${misc:Depends}, ${python:Depends}
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-scapy
 Description: PTF is a Python based dataplane test framework.
- PTF Packet Testing Framework
  .
- ---
+ PTF is a Python based dataplane test framework. It is based on unittest, which is included in the standard Python distribution.
  .
- # Introduction
+ This document is meant to provide an introduction to the framework, discuss the basics of running tests and to provide examples of how to add tests.
  .
- PTF is a Python based dataplane test framework. It is based on unittest, which
- is included in the standard Python distribution.
+ Most of the code was taken from the OFTest framework. However, PTF focuses on the dataplane and is independent of OpenFlow. We also made a few additions to oftest.
  .
- This document is meant to provide an introduction to the framework, discuss the
- basics of running tests and to provide examples of how to add tests.
- .
- Most of the code was taken from the [OFTest
- framework](https://github.com/floodlight/oftest). However, PTF focuses on the
- dataplane and is independent of OpenFlow. We also added several
- [new features](#New-features).
- .
- ---
- .
- # Longer Start
 
+Package: python3-ptf
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-scapy
+Description: PTF is a Python based dataplane test framework.
+ .
+ PTF is a Python based dataplane test framework. It is based on unittest, which is included in the standard Python distribution.
+ .
+ This document is meant to provide an introduction to the framework, discuss the basics of running tests and to provide examples of how to add tests.
+ .
+ Most of the code was taken from the OFTest framework. However, PTF focuses on the dataplane and is independent of OpenFlow. We also made a few additions to oftest.
+ .

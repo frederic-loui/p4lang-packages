@@ -1,5 +1,5 @@
-ptf (0.9.1-1) bionic; urgency=low
+ptf (0~nightly) bionic; urgency=low
 
-  * source package automatically created by stdeb 0.8.5
+  * source package automatically created by stdeb 0.8.2
 
- -- Frederic LOUI <frederic.loui@renater.fr>  Tue, 02 Apr 2019 19:55:22 +0000
+ -- Frederic LOUI <fl@mp.ls>  Mon, 19 Oct 2015 12:49:43 -0700
